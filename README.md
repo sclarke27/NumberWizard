@@ -1,2 +1,3 @@
 # NumberWizard
-Simple number guessing game created in Unity 4.6 as part of Udemy.com course. 
+Simple number guessing game created in Unity 4.6 as part of Udemy.com course. On this version i added a number of tiny bit of functionality outside of what the course asked for in order to make the game a bit more interesting (for a number guessing game).
+On the Start scene, the game will select random start and end number for the player for choose a number between. Those values get carried over inside of the GameData object to the main Game scene. There the game will pick a random number that is within +/-5 of (max+min)/2, check to be sure that number is within the proper range and finally check that the chosen random number hasnt already been tested. It does this by storing each guess in a List<int> and checking against that list on each new guess. This will prevent the game from guessing duplicates *unless* it has to (like when the player is cheating by lying).
